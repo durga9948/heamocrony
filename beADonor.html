@@ -22,8 +22,8 @@
 
   <!-- Main Stylesheet File -->
   <link href="css/style.css" rel="stylesheet">
+  <!-- =======================================================axio
 
-  <!-- =======================================================
     Theme Name: EstateAgency
     Theme URL: https://bootstrapmade.com/real-estate-agency-bootstrap-template/
     Author: BootstrapMade.com
@@ -41,18 +41,18 @@
     </div>
     <span class="close-box-collapse right-boxed ion-ios-close"></span>
     <div class="box-collapse-wrap form">
-      <form class="form-a">
+      <form class="request-form" action="responses.php" method="post">
         <div class="row">
           <div class="col-md-12 mb-2">
             <div class="form-group">
               <label for="Type">Place Of Blood Requirement</label>
-              <input type="text" class="form-control form-control-lg form-control-a" placeholder="Address">
+              <input type="text" class="form-control form-control-lg form-control-a" name='addressValue' placeholder="Address">
             </div>
           </div>
           <div class="col-md-6 mb-2">
             <div class="form-group">
               <label for="bedrooms">Blood Group Required</label>
-              <select class="form-control form-control-lg form-control-a" id="bedrooms">
+              <select class="form-control form-control-lg form-control-a" name="bgRequire">
                 <option>A+</option>
                 <option>A-</option>
                 <option>B+</option>
@@ -72,7 +72,7 @@
     </div>
   </div>
   <!--/ Form Search End /-->
-
+  
   <!--/ Nav Star /-->
   <nav class="navbar navbar-default navbar-trans navbar-expand-lg fixed-top">
     <div class="container">
@@ -120,7 +120,7 @@
   <!--/ Services Star /-->
   <section class="section-property section-t8">
     <div class="container">
-      <form  id='donor-Form' action="donorFormphp.php" method="post">
+      <form  id='donor-form' action="donorFormphp.php" method="POST">
         <br>
         <h3 class="color-b" > Blood Donation Form
         </h3>
@@ -165,59 +165,14 @@
           <br>
             <input type="text" id="location-input" name="address">
           <br>
-  
-          <!--<button>submit</button>-->
           <button type="submit" class="color-b">submit</button>
           <br>
           <br>
       </form>
-      <div id="geometry">Hello</div><br>
-      <!-- <script>
-        // Call Geocode
-        //geocode();
-        // Get location form
-        var locationForm = document.getElementById('donor-Form');
-        // Listen for submiot
-        locationForm.addEventListener('submit', geocode);
-        function geocode(e){
-        // Prevent actual submit
-        e.preventDefault();
-        var location = document.getElementById('location-input').value;
-        axios.get('https://maps.googleapis.com/maps/api/geocode/json',{
-          params:{
-          address:location,
-          key:'AIzaSyCCV8ro3-SJ5y0JA5zRkQh_MmpUWqa0DiQ'
-          }
-        })
-        .then(function(response){
-        // Log full response
-        console.log(response);
-        // Formatted Address
-       
-        // Address Components
-        
-        // Geometry
-        var lat = response.data.results[0].geometry.location.lat;
-        var lng = response.data.results[0].geometry.location.lng;
-        var geometryOutput = `
-          <ul class="list-group">
-            <li class="list-group-item"><strong>Latitude</strong>: ${lat}</li>
-            <li class="list-group-item"><strong>Longitude</strong>: ${lng}</li>
-          </ul>
-        `;
-        // Output to app
-        //document.getElementById('formatted-address').innerHTML = formattedAddressOutput;
-        //document.getElementById('address-components').innerHTML = addressComponentsOutput;
-        document.getElementById('geometry').innerHTML = geometryOutput;
-      })
-      .catch(function(error){
-        console.log(error);
-      });
-    }
-  </script> -->
     </div>
   </section>
   <!--/ Services End /-->
+
 
   <!--/ Property Star /-->
   <!--/ Property End /-->
@@ -232,7 +187,7 @@
   <!--/ Testimonials End /-->
 
   <!--/ footer Star /-->
-  <footer>s
+  <footer>
     <div class="container">
       <div class="row">
         <div class="col-md-12">
@@ -287,6 +242,5 @@
 
   <!-- Template Main Javascript File -->
   <script src="js/main.js"></script>
-
 </body>
 </html>
