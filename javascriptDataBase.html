@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Java script Data base</title>
+</head>
+<body>
+<script type="text/javascript">
+var connection = new ActiveXObject("ADODB.Connection") ;
+
+var connectionstring="Data Source=<server>;Initial Catalog=heamocrony;User ID="root";Password="";Provider=SQLOLEDB";
+
+connection.Open(connectionstring);
+var rs = new ActiveXObject("ADODB.Recordset");
+
+rs.Open("SELECT * FROM donor", connection);
+rs.MoveFirst
+while(!rs.eof)
+{
+   document.write(rs.fields(1));
+   rs.movenext;
+}
+
+rs.close;
+connection.close; 	
+</script>
+
+https://stackoverflow.com/questions/857670/how-to-connect-to-sql-server-database-from-javascript-in-the-browser
+</body>
+</html>

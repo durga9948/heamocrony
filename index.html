@@ -42,18 +42,18 @@
     </div>
     <span class="close-box-collapse right-boxed ion-ios-close"></span>
     <div class="box-collapse-wrap form">
-      <form class="form-a">
+      <form class="request-form" action="responses.php" method="post">
         <div class="row">
           <div class="col-md-12 mb-2">
             <div class="form-group">
               <label for="Type">Place Of Blood Requirement</label>
-              <input type="text" class="form-control form-control-lg form-control-a" placeholder="Address">
+              <input type="text" class="form-control form-control-lg form-control-a" name='addressValue' placeholder="Address">
             </div>
           </div>
           <div class="col-md-6 mb-2">
             <div class="form-group">
               <label for="bedrooms">Blood Group Required</label>
-              <select class="form-control form-control-lg form-control-a" id="bedrooms">
+              <select class="form-control form-control-lg form-control-a" name="bgRequire">
                 <option>A+</option>
                 <option>A-</option>
                 <option>B+</option>
